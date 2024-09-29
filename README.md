@@ -67,6 +67,7 @@ An extension of SVD that incorporates implicit feedback (e.g., implicit interact
 This project aims to build a recommendation system utilizing collaborative filtering techniques. The system incorporates User-Item and Item-Item filtering, as well as model-based approaches such as Singular Value Decomposition (SVD) and SVD++ for matrix factorization. 
 
 ## Dataset
+Link to dataset : https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset/data
 
 The dataset used in this project consists of several CSV files containing user-item interactions and movie features:
 
