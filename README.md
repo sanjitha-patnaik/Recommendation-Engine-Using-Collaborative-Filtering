@@ -110,12 +110,8 @@ The dataset used in this project consists of several CSV files containing user-i
 - **Cleaning the Data**: Any missing values or anomalies in the data were addressed to ensure the quality of the dataset.
 - **Merging Data**: Relevant features were merged to create a comprehensive dataset that links user ratings with movie metadata.
 
-### 2. Exploratory Data Analysis (EDA)
 
-- Conducted EDA to understand the distribution of ratings, number of users, and number of movies.
-- Visualized trends and patterns in user ratings and movie genres to inform the recommendation strategy.
-
-### 3. Collaborative Filtering Techniques
+### 2. Collaborative Filtering Techniques
 
 #### a. User-Item Filtering
 
@@ -127,7 +123,7 @@ The dataset used in this project consists of several CSV files containing user-i
 - This approach recommends items based on the similarity between items.
 - Similarity between items was computed, which helps in suggesting items that are similar to what the user has rated positively.
 
-### 4. Model-Based Approaches
+### 3. Model-Based Approaches
 
 #### a. Singular Value Decomposition (SVD)
 
@@ -139,13 +135,13 @@ The dataset used in this project consists of several CSV files containing user-i
 - An extension of SVD that incorporates implicit feedback.
 - Improved the recommendation quality by considering not only the explicit ratings but also the absence of ratings as implicit feedback.
 
-### 5. Evaluation Metrics
+### 4. Evaluation Metrics
 
 - **Root Mean Squared Error (RMSE)**: Measured the accuracy of the predicted ratings against the actual ratings.
 - **Mean Absolute Error (MAE)**: Provided additional insight into the average error of predictions.
 - These metrics helped to assess the performance of different recommendation algorithms.
 
-### 6. Implementation
+### 5. Implementation
 
 - Utilized the Surprise library in Python for implementing collaborative filtering algorithms.
 - Developed functions for training, evaluating, and making recommendations.
