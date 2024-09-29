@@ -13,7 +13,7 @@ Collaborative filtering can be broadly categorized into two main types:
 - User-Item Collaborative Filtering
 - Model-Based Collaborative Filtering
 
-  # 1. User-Based Collaborative Filtering
+**1. User-Based Collaborative Filtering**
 User-based collaborative filtering finds similar users to the target user and recommends items that those similar users have liked. It involves the following steps:
 
 **Find Similar Users:** Identify users with similar preferences to the active user (e.g., based on their ratings or interactions with items).
@@ -21,7 +21,7 @@ User-based collaborative filtering finds similar users to the target user and re
 
 
 
-# 2. Item-Based Collaborative Filtering
+**2. Item-Based Collaborative Filtering**
 In item-based collaborative filtering, instead of looking for similar users, we look for similar items. 
 This approach finds items that are similar to what the user has already rated or liked and recommends those items.
 
@@ -34,7 +34,7 @@ Steps:
 Model-based collaborative filtering uses machine learning models to predict user preferences based on observed user-item interactions.
 It often involves matrix factorization techniques, such as Singular Value Decomposition (SVD), to build the recommendation engine.
 
-   # Matrix Factorization Techniques
+   ## Matrix Factorization Techniques
 Matrix factorization is a mathematical technique used to reduce the dimensionality of large user-item matrices into a set of latent factors. 
 The main idea is to represent users and items in a lower-dimensional space, capturing hidden relationships.
 
