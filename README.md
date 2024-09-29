@@ -62,3 +62,90 @@ An extension of SVD that incorporates implicit feedback (e.g., implicit interact
 
 
 
+## Overview
+
+This project aims to build a recommendation system utilizing collaborative filtering techniques. The system incorporates User-Item and Item-Item filtering, as well as model-based approaches such as Singular Value Decomposition (SVD) and SVD++ for matrix factorization. 
+
+## Dataset
+
+The dataset used in this project consists of several CSV files containing user-item interactions and movie features:
+
+- **genome_scores.csv**: Contains relevance scores for tags assigned to movies.
+  - `movieId`
+  - `tagId`
+  - `relevance`
+  
+- **genome_tags.csv**: Contains features related to tags.
+  - `tagId`
+  - `tag`
+
+- **link.csv**: Provides additional movie identifiers.
+  - `movieId`
+  - `imdbId`
+  - `tmdbId`
+
+- **movie.csv**: Contains movie metadata.
+  - `movieId`
+  - `title`
+  - `genres`
+
+- **rating.csv**: Contains user ratings for movies.
+  - `userId`
+  - `movieId`
+  - `rating`
+  - `timestamp`
+
+- **tag.csv**: Contains user-generated tags for movies.
+  - `userId`
+  - `movieId`
+  - `tag`
+  - `timestamp`
+
+## Methodology
+
+### 1. Data Preprocessing
+
+- **Loading the Data**: The dataset was loaded into a Pandas DataFrame for easier manipulation and analysis.
+- **Cleaning the Data**: Any missing values or anomalies in the data were addressed to ensure the quality of the dataset.
+- **Merging Data**: Relevant features were merged to create a comprehensive dataset that links user ratings with movie metadata.
+
+### 2. Exploratory Data Analysis (EDA)
+
+- Conducted EDA to understand the distribution of ratings, number of users, and number of movies.
+- Visualized trends and patterns in user ratings and movie genres to inform the recommendation strategy.
+
+### 3. Collaborative Filtering Techniques
+
+#### a. User-Item Filtering
+
+- This method recommends items to users based on the preferences of similar users.
+- Similarity between users was computed using metrics like Pearson correlation or cosine similarity.
+  
+#### b. Item-Item Filtering
+
+- This approach recommends items based on the similarity between items.
+- Similarity between items was computed, which helps in suggesting items that are similar to what the user has rated positively.
+
+### 4. Model-Based Approaches
+
+#### a. Singular Value Decomposition (SVD)
+
+- Implemented SVD to decompose the user-item interaction matrix into lower-dimensional matrices.
+- Trained the SVD model using the training dataset and made predictions on the test set.
+
+#### b. SVD++
+
+- An extension of SVD that incorporates implicit feedback.
+- Improved the recommendation quality by considering not only the explicit ratings but also the absence of ratings as implicit feedback.
+
+### 5. Evaluation Metrics
+
+- **Root Mean Squared Error (RMSE)**: Measured the accuracy of the predicted ratings against the actual ratings.
+- **Mean Absolute Error (MAE)**: Provided additional insight into the average error of predictions.
+- These metrics helped to assess the performance of different recommendation algorithms.
+
+### 6. Implementation
+
+- Utilized the Surprise library in Python for implementing collaborative filtering algorithms.
+- Developed functions for training, evaluating, and making recommendations.
+
